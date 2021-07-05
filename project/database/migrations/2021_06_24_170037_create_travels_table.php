@@ -35,15 +35,7 @@ class CreateVoyagesTable extends Migration
      * @return void
      */
     public function down(){
-        Schema::table('travels', function (Blueprint $table) {
-            $table->dropColumn("id");
-            $table->dropColumn("data_arrivo");
-            $table->dropColumn("data_partenza");
-            $table->dropColumn("totale_notti");
-            $table->dropColumn("persone");
-            $table->dropColumn("hotel");
-            $table->dropColumn("descrizione"); 
-            $table->dropColumn("prezzo_totale"); 
-        });
+        Schema::dropIfExists('nome');
+   
     } 
 }      
