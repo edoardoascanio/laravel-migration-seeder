@@ -1,13 +1,10 @@
 <?php
 
-use Faker\Provider\ar_JO\Text;
-use Illuminate\Database\Console\Migrations\TableGuesser;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use phpDocumentor\Reflection\Types\Nullable;
 
-class CreateVoyagesTable extends Migration
+class CreateTravelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -25,7 +22,6 @@ class CreateVoyagesTable extends Migration
             $table->string("hotel", 50)->nullable();
             $table->longText("descrizione")->nullable();
             $table->integer("prezzo_totale")->nullable();
-            
         });
     }
 
@@ -34,8 +30,8 @@ class CreateVoyagesTable extends Migration
      *
      * @return void
      */
-    public function down(){
+    public function down()
+    {
         Schema::dropIfExists('travels');
-   
-    } 
-}      
+    }
+}
